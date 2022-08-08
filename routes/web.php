@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\LikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\ReservationController;
 
 Route::get('/home', [ShopController::class, 'index']);
 Route::get('/detail/{id}/', [ShopController::class, 'detail']);
+Route::get('/like', [LikeController::class, 'like']);
+Route::post('/like', [LikeController::class, 'like'])->name('like');
 Route::get('/done', [ReservationController::class, 'done']);
 Route::post('/done', [ReservationController::class, 'create']);
 Route::get('/mypage', [UserController::class, 'index']);

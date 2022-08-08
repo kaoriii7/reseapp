@@ -6,6 +6,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/18426ca9a1.js" crossorigin="anonymous"></script>
     @yield('head')
   </head>
 

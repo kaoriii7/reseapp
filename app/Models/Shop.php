@@ -9,9 +9,8 @@ class Shop extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-      'name',
-      'shop_detail',
+    protected $guarded = [
+      'id',
       'area_id',
       'genre_id',
     ];
@@ -24,5 +23,10 @@ class Shop extends Model
     public function genre()
     {
       return $this->belongsTo(Genre::class);
+    }
+
+    public function likes()
+    {
+      return $this->hasMany(Like::class);
     }
 }
