@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  padding: 0 100px;
+  justify-content: space-between;
+}
+
+a,
+input,
+select {
+  cursor: pointer;
+}
+
+/* 店舗詳細 */
+
+.wrap {
+  width: 47%;
+}
+
+img {
+  width: 100%;
+}
+
+.fa-heart {
+  color: pink;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* 予約フォーム */
