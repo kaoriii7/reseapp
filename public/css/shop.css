@@ -56,4 +56,9 @@
 .fa-heart {
   color: #E6E6FA;
   font-size: 40px;
+  cursor: pointer;
+}
+
+.unlike {
+  color: red;
 }

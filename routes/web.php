@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\LikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/mypage', [UserController::class, 'index']);
 Route::get('/mypage/delete/', [UserController::class, 'delete']);
 Route::post('/mypage/delete/', [UserController::class, 'delete'])->name('mypage.delete');
 Route::get('/', [UserController::class, 'getlogout']);
+Route::post('/like', [LikeController::class, 'create'])->name('like');
 
 Route::get('/', function () {
     return view('welcome');

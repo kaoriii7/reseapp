@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-  <form action="" method="get">
+  <form action="/" method="get">
    <div class="search-form">
     <select name="area_id">
       <option value="">All areas</option>
@@ -35,6 +35,7 @@
    </div>
   </form>
   @foreach ($shops as $shop)
+  {{var_dump($shop)}}
   <article class="card">
     <div class="img">
       <img src="{{ $shop->genre->image }}" alt="">
@@ -44,7 +45,15 @@
         <p class="card-tag">#{{ $shop->area->name }} #{{ $shop->genre->name }}</p>
         <div class="btn-wrap">
           <a href="/detail/{{ $shop->id }}"><button class="btn">詳しくみる</button></a>
-          <i class="fa-solid fa-heart"><input type="hidden"></i>
+          <form action="/like" method="post">
+            @if ($shop->likes = null)
+            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+            <i class="fa-solid fa-heart"></i>
+            @else
+            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+            <i class="fa-solid fa-heart unlike"></i>
+            @endif
+          </form>
         </div>
     </section>
   </article>

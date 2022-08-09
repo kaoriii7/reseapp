@@ -25,4 +25,9 @@ class Shop extends Model
     {
       return $this->belongsTo(Genre::class);
     }
+
+    public function like()
+    {
+      return $this->belongsTo(Like::class);
+    }
 }
