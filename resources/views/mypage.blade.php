@@ -58,9 +58,12 @@
     </div>
     <div class="like-wrap">
       <h2 class="ttl">お気に入り店舗</h2>
+      @foreach ($likes as $like)
+      {{var_dump($likes)}}
       <div class="like-shop">
-
+        <p>{{ $like->shop->name }}</p>
       </div>
+      @endforeach
     </div>
   </div>
 </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
+use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
@@ -25,16 +26,17 @@ class ShopController extends Controller
       if ($area_id)  {
         $shops = $query->where('area_id', $area_id)->get();
       }
-
       if ($genre_id)  {
         $shops = $query->where('genre_id', $genre_id)->get();
       }
-
       if ($search_name) {
         $shops = $query->where('name', 'like', '%'.$search_name.'%')->get();
       }
 
-      return view('index', compact('shops', 'areas', 'genres', 'area_id', 'genre_id', 'search_name', ));
+      $likes = Like::all();
+      var_dump($likes);
+
+      return view('index', compact('shops', 'areas', 'genres', 'area_id', 'genre_id', 'search_name', 'likes'));
     }
 
     public function detail($id, Request $request)

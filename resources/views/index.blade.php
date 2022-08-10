@@ -35,7 +35,6 @@
    </div>
   </form>
   @foreach ($shops as $shop)
-  {{var_dump($shop)}}
   <article class="card">
     <div class="img">
       <img src="{{ $shop->genre->image }}" alt="">
@@ -46,13 +45,13 @@
         <div class="btn-wrap">
           <a href="/detail/{{ $shop->id }}"><button class="btn">詳しくみる</button></a>
           <form action="/like" method="post">
-            @if ($shop->likes = null)
-            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
-            <i class="fa-solid fa-heart"></i>
-            @else
-            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
-            <i class="fa-solid fa-heart unlike"></i>
-            @endif
+          @csrf
+              @if ($likes)
+              {{var_dump($likes)}}
+              <i class="fa-solid fa-heart"><input type="hidden" name="shop_id" value="{{ $shop->id }}"></i>
+              @else
+              <i class="fa-solid fa-heart unlike"><input type="hidden" name="shop_id" value="{{ $shop}}"></i>
+              @endif
           </form>
         </div>
     </section>

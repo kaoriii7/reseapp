@@ -25,7 +25,8 @@ Route::get('/mypage', [UserController::class, 'index']);
 Route::get('/mypage/delete/', [UserController::class, 'delete']);
 Route::post('/mypage/delete/', [UserController::class, 'delete'])->name('mypage.delete');
 Route::get('/', [UserController::class, 'getlogout']);
-Route::post('/like', [LikeController::class, 'create'])->name('like');
+Route::get('/like', [LikeController::class, 'create']);
+Route::post('/like', [LikeController::class, 'create']);
 
 Route::get('/', function () {
     return view('welcome');

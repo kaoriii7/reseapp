@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reservation;
-use App\Models\Likes;
+use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -17,7 +17,9 @@ class UserController extends Controller
       $email = $request->email;
       $password = $request->password;
 
-      return view('mypage', compact('reservations', 'user', 'text', 'email', 'password'));
+      $likes = Like::where('user_id', Auth::id())->get();
+
+      return view('mypage', compact('reservations', 'user', 'text', 'email', 'password', 'likes'));
     }
 
     public function delete(Request $request)
