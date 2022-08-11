@@ -17,7 +17,8 @@ class UserController extends Controller
       $email = $request->email;
       $password = $request->password;
 
-      $likes = Like::where('user_id', Auth::id())->get();
+      $likes = Like::all();
+      var_dump($likes);
 
       return view('mypage', compact('reservations', 'user', 'text', 'email', 'password', 'likes'));
     }

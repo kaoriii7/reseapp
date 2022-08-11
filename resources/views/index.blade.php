@@ -44,15 +44,25 @@
         <p class="card-tag">#{{ $shop->area->name }} #{{ $shop->genre->name }}</p>
         <div class="btn-wrap">
           <a href="/detail/{{ $shop->id }}"><button class="btn">詳しくみる</button></a>
+            @if ($shop->id == $shop->shop_id)
+          <form action="/unlike" method="post">
+          @csrf
+            <p>unlike</p>
+            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+            <button type="submit">
+            <i class="fa-solid fa-heart unlike"></i>
+            </button>
+          </form>
+            @else
           <form action="/like" method="post">
           @csrf
-              @if ($likes)
-              {{var_dump($likes)}}
-              <i class="fa-solid fa-heart"><input type="hidden" name="shop_id" value="{{ $shop->id }}"></i>
-              @else
-              <i class="fa-solid fa-heart unlike"><input type="hidden" name="shop_id" value="{{ $shop}}"></i>
-              @endif
+            <p>like</p>
+            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+            <button type="submit">
+            <i class="fa-solid fa-heart"></i>
+            </button>
           </form>
+            @endif
         </div>
     </section>
   </article>

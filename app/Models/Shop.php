@@ -28,24 +28,8 @@ class Shop extends Model
       return $this->belongsTo(Genre::class);
     }
 
-    public function likes()
+    public function like()
     {
-      return $this->hasMany(Like::class);
+      return $this->belongsTo(Like::class);
     }
-
-    // public function is_liked_by_auth_user()
-    // {
-    //   $id = Auth::id();
-    //   $like_users = array();
-
-    //   foreach ($this->likes as $like) {
-    //     array_push($like_users, $like->user_id);
-    //   }
-
-    //   if(in_array($id, $like_users)) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
-  }
+}

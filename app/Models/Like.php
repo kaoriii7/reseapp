@@ -16,5 +16,6 @@ class Like extends Model
 
     public function shop()
     {
-      return $this->belongsTo(Shop::class);
-    }}
+      return $this->hasOne(Shop::class);
+    }
+}
