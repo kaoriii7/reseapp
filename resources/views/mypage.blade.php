@@ -1,32 +1,19 @@
 @extends('layouts.after_login_header')
 <style>
-  .container {
-    padding: 0 100px;
-  }
-  .user-name {
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-  .content-wrap {
-    display: flex;
-  }
-  .ttl {
-    font-size: 20px;
-  }
-  .reservation-wrap {
-    width: 40%;
-  }
-  .like-wrap {
-    width: 50%;
-  }
+
 </style>
 @section('title', 'Rese')
+
+@section('head')
+    <link rel="stylesheet" href="css/mypage.css">
+@endsection
+
 
 @section('content')
 <div class="container">
   <p class="user-name">{{ $text }}</p>
   <div class="content-wrap">
-    <div class="reservation-wrap">
+    <div class="reservation-wrap wrap">
       <h2 class="ttl">予約状況</h2>
       @foreach ($reservations as $reservation)
       <form action="{{ route('mypage.delete') }}" method="get">
@@ -56,13 +43,32 @@
       </form>
       @endforeach
     </div>
-    <div class="like-wrap">
+    <div class="like-wrap wrap">
       <h2 class="ttl">お気に入り店舗</h2>
+      <div class="card-wrap">
       @foreach ($likes as $like)
-      <div class="like-shop">
-        <p>{{ $like->shop_id }}</p>
-      </div>
+        <article class="card">
+          <div class="img">
+            <img src="{{ $like->shop->genre->image }}" alt="">
+          </div>
+          <section class="card-content">
+              <h3 class="card-ttl">{{ $like->shop->name }}</h3>
+              <p class="card-tag">#{{ $like->shop->area->name }} #{{ $like->shop->genre->name }}</p>
+              <div class="btn-wrap">
+                <a href="/detail/{{ $like->shop->id }}"><button class="btn">詳しくみる</button></a>
+                <form action="/unlike" method="post">
+                @csrf
+                  <p>unlike</p>
+                  <input type="hidden" name="shop_id" value="{{ $like->shop->id }}">
+                  <button type="submit">
+                  <i class="fa-solid fa-heart unlike"></i>
+                  </button>
+                </form>
+              </div>
+          </section>
+        </article>
       @endforeach
+      </div>
     </div>
   </div>
 </div>
