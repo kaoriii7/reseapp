@@ -44,7 +44,7 @@
         <p class="card-tag">#{{ $shop->area->name }} #{{ $shop->genre->name }}</p>
         <div class="btn-wrap">
           <a href="/detail/{{ $shop->id }}"><button class="btn">詳しくみる</button></a>
-            @if ($shop->id == $shop->shop_id)
+            @if ($shop->like != null)
           <form action="/unlike" method="post">
           @csrf
             <p>unlike</p>

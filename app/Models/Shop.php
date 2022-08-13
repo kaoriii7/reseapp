@@ -30,6 +30,6 @@ class Shop extends Model
 
     public function like()
     {
-      return $this->belongsTo(Like::class);
+      return $this->hasOne(Like::class);
     }
 }
