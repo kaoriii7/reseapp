@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ShopRequest;
 
 class ReservationController extends Controller
 {
-  public function create(Request $request)
+  public function create(ShopRequest $request)
   {
     $reservation = Reservation::all();
     Reservation::create([

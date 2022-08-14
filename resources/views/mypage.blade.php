@@ -5,7 +5,7 @@
 @section('title', 'Rese')
 
 @section('head')
-    <link rel="stylesheet" href="css/mypage.css">
+  <link rel="stylesheet" href="css/mypage.css">
 @endsection
 
 
@@ -18,9 +18,15 @@
       @foreach ($reservations as $reservation)
       <form action="{{ route('mypage.delete') }}" method="get">
         <div class="reservation-card">
-          <h3>予約</h3>
-          <input type="hidden" name="reservation_id" value="{{ $reservation->id }}">
-          <button type="submit" class="btn">delete</button>
+          <div class="card_ttl">
+            <h3>予約{{ $reservation->id }}</h3>
+            <div class="delete_btn">
+              <input type="hidden" name="reservation_id" value="{{ $reservation->id }}">
+              <button type="submit" class="x_btn">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </button>
+            </div>
+          </div>
           <table>
             <tr>
               <th>Shop</th>
@@ -58,7 +64,7 @@
                 <a href="/detail/{{ $like->shop->id }}"><button class="btn">詳しくみる</button></a>
                 <form action="/unlike" method="post">
                 @csrf
-                  <p>unlike</p>
+                  <!-- <p>unlike</p> -->
                   <input type="hidden" name="shop_id" value="{{ $like->shop->id }}">
                   <button type="submit">
                   <i class="fa-solid fa-heart unlike"></i>

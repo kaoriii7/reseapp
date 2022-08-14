@@ -26,8 +26,26 @@
     width: 40%;
   }
 
-  .like-wrap {
-    width: 50%;
+  .card_ttl {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+  }
+  .x_btn {
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background: #1463ff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .fa-circle-xmark {
+  }
+  th {
+    text-align: left;
+  }
+  th, td {
+    padding: 5px;
   }
 
 /* お気に入りフォーム */
@@ -37,6 +55,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.like-wrap {
+  width: 50%;
 }
 
 .card {

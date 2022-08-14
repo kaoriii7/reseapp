@@ -40,20 +40,31 @@
   </article>
   <div class="wrap reservation-wrap">
     <h2>予約</h2>
-    <form action="/done" method="post">
+  <form action="/done" method="post">
       @csrf
       <div class="input-form">
-        <input id="date_id" type="date" name="date">
+        <input id="date_id" type="date" name="date" min="" max="">
         <select id="time_id" name="time_id">
+          <option value="">time</option>
           @foreach ($times as $time)
             <option>{{ $time }}</option>
           @endforeach
         </select>
         <select id="person_id" name="person_id">
+          <option value="">person</option>
           @foreach ($persons as $person)
             <option>{{ $person }}</option>
           @endforeach
         </select>
+        @error('date')
+            <p class="container__form--error">{{$message}}</p>
+        @enderror
+        @error('time_id')
+            <p class="container__form--error">{{$message}}</p>
+        @enderror
+        @error('person_id')
+            <p class="container__form--error">{{$message}}</p>
+        @enderror
       </div>
       <table>
         <tr>
@@ -71,7 +82,7 @@
         </tr>
         <tr>
           <th>Number</th>
-          <td id="output_num">人</td>
+          <td id="output_num"></td>
         </tr>
       </table>
       <input type="submit" value="予約する">
@@ -100,5 +111,13 @@
   function updateNumber(e) {
     outputNumber.textContent = e.target.value;
   }
+
+  // 日付の範囲指定？
+  dayjs.locale('ja');
+  const _nowStr = dayjs().format('YYYY-MM-DD');
+  const _maxStr = dayjs().add(180, 'day').format('YYYY-MM-DD');
+  const _formDate = document.getElementById('date_id');
+  _formDate.attributes.min.value = _nowStr;
+  _formDate.attributes.max.value = _maxStr;
 </script>
 @endsection

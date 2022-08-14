@@ -17,10 +17,8 @@
           <nav class="nav" id="nav">
             <ul>
               <li><a href="/home">Home</a></li>
-              <form action="{{ route('login') }}" method="get">
-              <button type="submit">LOGOUT</button>
-              </form>
-              <li><a href="/mypage">MYPAGE</a></li>
+              <li><a href="{{ route('register') }}">RESISTRATION</a></li>
+              <li><a href="{{ route('login') }}">LOGIN</a></li>
             </ul>
           </nav>
           <div class="menu" id="menu">

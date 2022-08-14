@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-  <form action="/" method="get">
+  <form action="/home" method="get">
    <div class="search-form">
     <select name="area_id">
       <option value="">All areas</option>
@@ -47,7 +47,7 @@
             @if ($shop->like != null)
           <form action="/unlike" method="post">
           @csrf
-            <p>unlike</p>
+            <!-- <p>unlike</p> -->
             <input type="hidden" name="shop_id" value="{{ $shop->id }}">
             <button type="submit">
             <i class="fa-solid fa-heart unlike"></i>
@@ -56,7 +56,7 @@
             @else
           <form action="/like" method="post">
           @csrf
-            <p>like</p>
+            <!-- <p>like</p> -->
             <input type="hidden" name="shop_id" value="{{ $shop->id }}">
             <button type="submit">
             <i class="fa-solid fa-heart"></i>

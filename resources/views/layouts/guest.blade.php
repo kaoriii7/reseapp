@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/18426ca9a1.js" crossorigin="anonymous"></script>
+  </head>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+  <body>
+    <header class="header">
+      <div class="ttl-wrap">
+        <div class="menu-wrap">
+          <nav class="nav" id="nav">
+            <ul>
+              <li><a href="/home">Home</a></li>
+              <li><a href="{{ route('register') }}">RESISTRATION</a></li>
+              <li><a href="{{ route('login') }}">LOGIN</a></li>
+            </ul>
+          </nav>
+          <div class="menu" id="menu">
+            <span class="menu__line--top"></span>
+            <span class="menu__line--middle"></span>
+            <span class="menu__line--bottom"></span>
+          </div>
         </div>
-    </body>
+        <h1>{{ config('app.name', 'Laravel') }}</h1>
+      </div>
+    </header>
+    <main class="content">
+      {{ $slot }}
+    </main>
+    <script src="js/common.js" type="text/javascript"></script>
+  </body>
 </html>
+
+<style></style>

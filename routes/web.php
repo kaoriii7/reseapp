@@ -24,7 +24,7 @@ Route::post('/done', [ReservationController::class, 'create']);
 Route::get('/mypage', [UserController::class, 'index']);
 Route::get('/mypage/delete/', [UserController::class, 'delete']);
 Route::post('/mypage/delete/', [UserController::class, 'delete'])->name('mypage.delete');
-Route::get('/', [UserController::class, 'getlogout']);
+Route::get('/logout', [UserController::class, 'getlogout']);
 Route::get('/home/like', [LikeController::class, 'index']);
 Route::post('/like', [LikeController::class, 'create']);
 Route::post('/unlike', [LikeController::class, 'delete']);
