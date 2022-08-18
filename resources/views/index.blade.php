@@ -48,24 +48,26 @@
           <a href="/detail/{{ $shop->id }}"><button class="btn">詳しくみる</button></a>
           @if(isset($shop->like->shop_id) && (Auth::id() == $shop->like->user_id))
             @if ($shop->like->shop_id == $shop->id)
-          <form action="/unlike" method="post">
-          @csrf
-            <!-- unlike -->
-            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
-            <button type="submit">
-            <i class="fa-solid fa-heart unlike"></i>
-            </button>
-          </form>
+            <form action="/unlike" method="post">
+              {{var_dump($shop->id)}}
+            @csrf
+              <!-- unlike -->
+              <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+              <button type="submit">
+              <i class="fa-solid fa-heart unlike"></i>
+              </button>
+            </form>
           @endif
             @else
-          <form action="/like" method="post">
-          @csrf
-            <!-- like -->
-            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
-            <button type="submit">
-            <i class="fa-solid fa-heart"></i>
-            </button>
-          </form>
+            <form action="/like" method="post">
+              {{var_dump($shop->id)}}
+            @csrf
+              <!-- like -->
+              <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+              <button type="submit">
+              <i class="fa-solid fa-heart"></i>
+              </button>
+            </form>
             @endif
         </div>
     </section>
