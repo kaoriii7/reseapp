@@ -16,7 +16,7 @@
     width: 100%;
   }
   .fa-heart {
-    color: white;
+    color: red;
     font-size: 40px;
     cursor: pointer;
   }
@@ -24,11 +24,15 @@
 
 @section('title', 'Rese')
 
+@section('head')
+    <link rel="stylesheet" href="css/detail.css">
+@endsection
+
 @section('content')
 <div class="container">
   <article class="wrap shop-wrap">
     <div class="shop-ttl">
-      <a href="/"><</a>
+      <a href="/home"><</a>
       <h2>{{ $shop->name }}</h2>
       <i class="fa-solid fa-heart"><input type="hidden"></i>
     </div>

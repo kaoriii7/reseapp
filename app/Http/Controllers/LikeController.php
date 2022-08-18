@@ -12,7 +12,7 @@ class LikeController extends Controller
     {
       Like::create([
         'user_id' => Auth::id(),
-        'shop_id' => $request->input('shop_id'),
+        'shop_id' => $request->shop_id,
       ]);
       return back();
     }

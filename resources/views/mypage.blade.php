@@ -15,11 +15,11 @@
   <div class="content-wrap">
     <div class="reservation-wrap wrap">
       <h2 class="ttl">予約状況</h2>
-      @foreach ($reservations as $reservation)
+      @foreach ($reservations as $key=>$reservation)
       <form action="{{ route('mypage.delete') }}" method="get">
         <div class="reservation-card">
           <div class="card_ttl">
-            <h3>予約{{ $reservation->id }}</h3>
+            <h3>予約{{$key+1}}</h3>
             <div class="delete_btn">
               <input type="hidden" name="reservation_id" value="{{ $reservation->id }}">
               <button type="submit" class="x_btn">

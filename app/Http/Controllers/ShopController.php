@@ -34,8 +34,7 @@ class ShopController extends Controller
         $shops = $query->where('name', 'like', '%'.$search_name.'%')->get();
       }
 
-      $likequery = Like::query();
-      $likes = $likequery->where('user_id', Auth::id())->get();
+      $likes = Like::where('user_id', Auth::id())->get();
 
       return view('index', compact('shops', 'areas', 'genres', 'area_id', 'genre_id', 'search_name', 'likes'));
     }

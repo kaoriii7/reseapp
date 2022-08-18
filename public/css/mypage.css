@@ -4,6 +4,7 @@
 
   .user-name {
     font-size: 24px;
+    font-weight: bold;
     margin-bottom: 50px;
   }
 
@@ -14,22 +15,26 @@
 
   .ttl {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .wrap {
-    width: 40%;
+    width: 47%;
   }
 
-/* 予約フォーム */
+/* 予約一覧 */
 
-  .reservation-wrap {
-    width: 40%;
+  .reservation-card {
+    background: #1463ff;
+    border-radius: 7px;
+    padding: 30px;
+    margin: 20px 20px 20px 0;
+    color: #fff;
+    width: 100%;
   }
-
   .card_ttl {
     display: flex;
     justify-content: space-between;
-    margin: 30px;
   }
   .x_btn {
     height: 30px;
@@ -39,30 +44,24 @@
     color: #fff;
     cursor: pointer;
   }
-  .fa-circle-xmark {
-  }
   th {
     text-align: left;
   }
   th, td {
-    padding: 5px;
+    padding: 5px 20px 5px 5px;
+    color: #fff;
   }
 
-/* お気に入りフォーム */
-
+/* お気に入り一覧 */
 
 .card-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.like-wrap {
-  width: 50%;
-}
-
 .card {
   width: 46%;
-  margin-bottom: 26px;
+  margin: 10px 0;
   background: white;
   border-radius: 7px;
 }
@@ -113,4 +112,19 @@
 
 .unlike {
   color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
+  .card-wrap {
+    flex-flow: column;
+  }
+  .card {
+    width: 100%;
+  }
+  tr {
+    display: grid;
+  }
 }
