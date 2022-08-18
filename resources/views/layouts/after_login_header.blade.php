@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/18426ca9a1.js" crossorigin="anonymous"></script>
     @yield('head')
   </head>
@@ -35,7 +35,7 @@
     <main class="content">
     @yield('content')
     </main>
-    <script src="js/common.js" type="text/javascript"></script>
+    <script src="/js/common.js" type="text/javascript"></script>
   </body>
 
 </html>

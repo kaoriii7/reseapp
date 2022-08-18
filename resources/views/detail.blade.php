@@ -1,32 +1,10 @@
 @extends('layouts.after_login_header')
 
-<style>
-  .container {
-    display: flex;
-    padding: 0 100px;
-    justify-content: space-between;
-  }
-  a, input, select {
-    cursor: pointer;
-  }
-  .wrap {
-    width: 47%;
-  }
-  img {
-    width: 100%;
-  }
-  .fa-heart {
-    color: red;
-    font-size: 40px;
-    cursor: pointer;
-  }
-</style>
+@section('head')
+    <link rel="stylesheet" href="/css/detail.css">
+@endsection
 
 @section('title', 'Rese')
-
-@section('head')
-    <link rel="stylesheet" href="css/detail.css">
-@endsection
 
 @section('content')
 <div class="container">

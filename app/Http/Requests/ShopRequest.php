@@ -24,7 +24,7 @@ class ShopRequest extends FormRequest
     public function rules()
     {
         return [
-            'date' => 'required',
+            'date' => 'required|after:today',
             'time_id' => 'required',
             'person_id' => 'required',
         ];

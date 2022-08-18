@@ -1,13 +1,10 @@
 @extends('layouts.after_login_header')
-<style>
-
-</style>
-@section('title', 'Rese')
 
 @section('head')
-  <link rel="stylesheet" href="css/mypage.css">
+  <link rel="stylesheet" href="/css/mypage.css">
 @endsection
 
+@section('title', 'Rese')
 
 @section('content')
 <div class="container">
