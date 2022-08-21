@@ -31,6 +31,6 @@ class UserController extends Controller
     public function getlogout()
     {
       Auth::logout();
-      return view('index');
+      return view('/auth/login');
     }
 }

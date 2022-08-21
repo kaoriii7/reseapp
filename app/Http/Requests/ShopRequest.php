@@ -24,7 +24,7 @@ class ShopRequest extends FormRequest
     public function rules()
     {
         return [
-            'date' => 'required|after:today',
+            'date' => 'required|after:tomorrow',
             'time_id' => 'required',
             'person_id' => 'required',
         ];
@@ -34,6 +34,7 @@ class ShopRequest extends FormRequest
     {
       return [
         'date.required' => '日付の入力が必要です',
+        'date.after' => '明日以降の日付で入力してください',
         'time_id.required' => '時間の入力が必要です',
         'person_id.required' => '人数の入力が必要です',
       ];

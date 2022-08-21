@@ -32,4 +32,9 @@ class Shop extends Model
     {
       return $this->hasOne(Like::class);
     }
+
+    public function liked($user_id)
+    {
+      return Like::where('user_id', $user_id)->where('shop_id', $this->id)->first();
+    }
 }

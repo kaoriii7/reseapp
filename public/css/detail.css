@@ -3,27 +3,133 @@
   padding: 0 100px;
   justify-content: space-between;
 }
-
+.wrap {
+  width: 47%;
+}
 a,
 input,
 select {
   cursor: pointer;
 }
-
-/* 店舗詳細 */
-
-.wrap {
-  width: 47%;
+.back-btn {
+  background: white;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  margin-top: -5px;
+  text-align: center;
 }
-
-img {
-  width: 100%;
+.shop-ttl {
+  display: flex;
 }
-
+h2 {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.form {
+  margin-right: 0;
+  margin-left: auto;
+}
 .fa-heart {
-  color: pink;
+  color: white;
   font-size: 40px;
   cursor: pointer;
 }
+.unlike {
+  color: red;
+}
+
+/* 店舗詳細 */
+
+img {
+  width: 100%;
+  margin: 20px 0;
+}
+.shop-tag {
+  margin-bottom: 20px;
+}
+.shop-detail {
+  line-height: 1.5em;
+}
 
 /* 予約フォーム */
+
+.reservation-wrap {
+  margin-top: -100px;
+  color: white;
+  background: #1463ff;
+  border-radius: 7px;
+}
+.reservation-ttl {
+  margin: 30px 20px;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-content {
+  margin: 0 20px 14px 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.date-form {
+  width: 140px;
+}
+.output-table {
+  background: rgba(255, 255, 255, 0.25);
+  width: 90%;
+  border-radius: 5px;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+th, td {
+  text-align: left;
+  padding: 10px 20px;
+}
+td {
+  padding-left: 0;
+  width: 70%;
+}
+.reserve-btn {
+  background: #0752ea;
+  width: 100%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin-top: 60%;
+  text-align: center;
+}
+.btn {
+  color: white;
+  background: #0752ea;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.error {
+  margin-left: 20px;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+      width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .reservation-wrap {
+    margin-top: 50px;
+  }
+  .reserve-btn {
+    margin-top: 10%;
+  }
+}

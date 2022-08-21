@@ -1,7 +1,9 @@
 .content {
   margin: 0 100px;
 }
-
+button {
+  cursor: pointer;
+}
 /* 検索欄 */
 
 .search-form {
@@ -27,21 +29,35 @@
   background: none;
 }
 .bar {
-  font-size: 30px;
+  font-size: 24px;
   color: #E6E6FA;
+  margin-bottom: 5px;
+}
+.fa-magnifying-glass {
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #E6E6FA;
+}
+.search-btn {
+  font-size: 12px;
 }
 
 /* ショップカード */
 
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .card {
-  float: left;
   width: 23%;
-  margin-right: calc(6% / 3);
+  margin-right: calc(8% / 3);
   margin-top: 24px;
   background: white;
   border-radius: 7px;
 }
-
+.card:nth-child(4n) {
+  margin-right: 0;
+}
 .img img {
   width: 100%;
   background-position: center;
@@ -50,26 +66,21 @@
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
 }
-
 .card-content {
   padding: 20px;
 }
-
 .card-ttl {
-  margin-bottom: 5px;
-  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 22px;
 }
-
 .card-tag {
   font-size: 14px;
 }
-
 .btn-wrap {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
 .btn {
   padding: 10px 20px;
   border: none;
@@ -79,17 +90,14 @@
   color: #fff;
   cursor: pointer;
 }
-
 .fa-heart {
   color: #E6E6FA;
   font-size: 40px;
   cursor: pointer;
 }
-
 .unlike {
   color: red;
 }
-
 @media screen and (max-width: 768px) {
 .card {
     width: 100%;
@@ -97,5 +105,18 @@
     margin-top: 24px;
     background: white;
     border-radius: 7px;
-  }
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 }

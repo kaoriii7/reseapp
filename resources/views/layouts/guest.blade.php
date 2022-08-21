@@ -16,8 +16,8 @@
           <nav class="nav" id="nav">
             <ul>
               <li><a href="/home">Home</a></li>
-              <li><a href="{{ route('register') }}">RESISTRATION</a></li>
-              <li><a href="{{ route('login') }}">LOGIN</a></li>
+              <li><a href="{{ route('register') }}">Rgistratione</a></li>
+              <li><a href="{{ route('login') }}">Login</a></li>
             </ul>
           </nav>
           <div class="menu" id="menu">
@@ -35,5 +35,3 @@
     <script src="js/common.js" type="text/javascript"></script>
   </body>
 </html>
-
-<style></style>

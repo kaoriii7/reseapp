@@ -10,9 +10,27 @@
 <div class="container">
   <article class="wrap shop-wrap">
     <div class="shop-ttl">
-      <a href="/home"><</a>
+      <a class="back-btn" href="/home"><</a>
       <h2>{{ $shop->name }}</h2>
-      <i class="fa-solid fa-heart"><input type="hidden"></i>
+      @if ($shop->liked(Auth::id()))
+      <form class="form" action="/unlike" method="post">
+      @csrf
+        <!-- unlike -->
+        <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+        <button type="submit">
+          <i class="fa-solid fa-heart unlike"></i>
+        </button>
+      </form>
+      @else
+      <form class="form" action="/like" method="post">
+      @csrf
+        <!-- like -->
+        <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+        <button type="submit">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      </form>
+      @endif
     </div>
     <img src="{{ $shop->genre->image }}" alt="">
     <section class="shop-content">
@@ -21,53 +39,58 @@
     </section>
   </article>
   <div class="wrap reservation-wrap">
-    <h2>予約</h2>
-  <form action="/done" method="post">
+    <h2 class="reservation-ttl">予約</h2>
+    <form class="form" action="/done" method="post">
       @csrf
       <div class="input-form">
-        <input id="date_id" type="date" name="date" min="" max="">
-        <select id="time_id" name="time_id">
+        @error('date')
+            <p class="error container__form--error">{{$message}}</p>
+        @enderror
+        <input class="date-form form-content" id="date_id" type="date" name="date" value="{{ old('date') }}">
+        @error('time_id')
+            <p class="error container__form--error">{{$message}}</p>
+        @enderror
+        <select class="form-content" id="time_id" name="time_id">
           <option value="">time</option>
           @foreach ($times as $time)
-            <option>{{ $time }}</option>
+            <option value="{{$time}}" @if(old('time_id', $time_id ?? '') == $time) selected @endif>{{ $time }}</option>
           @endforeach
         </select>
-        <select id="person_id" name="person_id">
-          <option value="">person</option>
-          @foreach ($persons as $person)
-            <option>{{ $person }}</option>
-          @endforeach
-        </select>
-        @error('date')
-            <p class="container__form--error">{{$message}}</p>
-        @enderror
-        @error('time_id')
-            <p class="container__form--error">{{$message}}</p>
-        @enderror
         @error('person_id')
-            <p class="container__form--error">{{$message}}</p>
+            <p class="error container__form--error">{{$message}}</p>
         @enderror
+        <select class="form-content" id="person_id" name="person_id">
+          <option value="">number</option>
+          @foreach ($persons as $person)
+          {{var_dump($persons)}}
+            <option value="{{$person}}" @if(old('person_id', $person_id ?? '') == $person) selected @endif>{{ $person }}</option>
+          @endforeach
+        </select>
       </div>
-      <table>
-        <tr>
-          <th>Shop</th>
-          <input type="hidden" name="shop_id" value="{{ $shop->id }}">
-          <td>{{ $shop->name }}</td>
-        </tr>
-        <tr>
-          <th>Date</th>
-          <td id="output_date"></td>
-        </tr>
-        <tr>
-          <th>Time</th>
-          <td id="output_time"></td>
-        </tr>
-        <tr>
-          <th>Number</th>
-          <td id="output_num"></td>
-        </tr>
-      </table>
-      <input type="submit" value="予約する">
+      <div class="output-table">
+        <table class>
+          <tr>
+            <th>Shop</th>
+            <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+            <td>{{ $shop->name }}</td>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <td id="output_date"></td>
+          </tr>
+          <tr>
+            <th>Time</th>
+            <td id="output_time"></td>
+          </tr>
+          <tr>
+            <th>Number</th>
+            <td id="output_num"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="reserve-btn">
+        <input class="btn" type="submit" value="予約する">
+      </div>
     </form>
   </div>
 </div>

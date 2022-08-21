@@ -20,13 +20,13 @@ use App\Http\Controllers\LikeController;
 Route::get('/home', [ShopController::class, 'index']);
 Route::get('/detail/{id}/', [ShopController::class, 'detail']);
 Route::get('/done', [ReservationController::class, 'done']);
-Route::post('/done', [ReservationController::class, 'create']);
-Route::get('/mypage', [UserController::class, 'index']);
+Route::post('/done', [ReservationController::class, 'create'])->middleware('auth');
+Route::get('/mypage', [UserController::class, 'index'])->middleware('auth');
 Route::get('/mypage/delete/', [UserController::class, 'delete']);
 Route::post('/mypage/delete/', [UserController::class, 'delete'])->name('mypage.delete');
-Route::get('/logout', [UserController::class, 'getlogout']);
-Route::get('/home/like', [LikeController::class, 'index']);
-Route::post('/like', [LikeController::class, 'create']);
+Route::get('/logout', [UserController::class, 'getlogout'])->name('logout');
+Route::get('/home/like', [LikeController::class, 'index'])->middleware('auth');
+Route::post('/like', [LikeController::class, 'create'])->middleware('auth');
 Route::post('/unlike', [LikeController::class, 'delete']);
 
 Route::get('/', function () {
