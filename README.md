@@ -55,9 +55,11 @@ Laravel 8.83.19
 
 GitHub
 
-## テーブル設計![テーブル設計１](https://user-images.githubusercontent.com/103088168/186350633-33410410-4f39-4ab1-9ce8-23d8ba9227ea.png)![テーブル設計２](https://user-images.githubusercontent.com/103088168/186350643-3f0542c9-fd33-48f6-95bb-6019dc9831d9.png)![テーブル設計３](https://user-images.githubusercontent.com/103088168/186350651-7a859ebd-96f0-4173-b817-fc5c9d0146ad.png)
+## テーブル設計
+![テーブル設計１](https://user-images.githubusercontent.com/103088168/186350633-33410410-4f39-4ab1-9ce8-23d8ba9227ea.png)![テーブル設計２](https://user-images.githubusercontent.com/103088168/186350643-3f0542c9-fd33-48f6-95bb-6019dc9831d9.png)![テーブル設計３](https://user-images.githubusercontent.com/103088168/186350651-7a859ebd-96f0-4173-b817-fc5c9d0146ad.png)
 
-## ER図![ER図](https://user-images.githubusercontent.com/103088168/186351805-e9afa021-3364-4f61-8075-64fc723fde82.png)
+## ER図
+![ER図](https://user-images.githubusercontent.com/103088168/186351805-e9afa021-3364-4f61-8075-64fc723fde82.png)
 
 ## 環境構築
 
