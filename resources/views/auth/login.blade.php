@@ -37,6 +37,7 @@
     background: white;
     margin: 100px auto;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
   }
   h2 {
     color: white;

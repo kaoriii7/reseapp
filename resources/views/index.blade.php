@@ -8,9 +8,9 @@
 
 @section('content')
 <div class="container">
-  <form action="/home" method="get">
+  <form action="/" method="get">
     <div class="search-form">
-      <select name="area_id" id="search" class="form_box area_form">
+      <select name="area_id" id="search" class="form__box area-form">
         <option value="">All areas</option>
         @foreach ($areas as $area)
           @if ($area->id == $area_id)
@@ -21,7 +21,7 @@
         @endforeach
       </select>
       <p class="bar">|</p>
-      <select name="genre_id" id="search" class="form_box genre_form">
+      <select name="genre_id" id="search" class="form__box genre-form">
         <option value="">All genres</option>
         @foreach ($genres as $genre)
           @if ($genre->id == $genre_id)
@@ -32,10 +32,11 @@
         @endforeach
       </select>
       <p class="bar">|</p>
+      <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+      <input type="search" class="form__box name-form" placeholder="Search..." name="search_name" id="search" value="@if (isset($search_name)) {{ $search_name }} @endif">
       <button class="search-btn" type="submit">
-        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+        search
       </button>
-      <input type="search" class="form_box name_form" placeholder="Search..." name="search_name" id="search" value="@if (isset($search_name)) {{ $search_name }} @endif">
     </div>
   </form>
   <div class="card-wrap">

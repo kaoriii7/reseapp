@@ -1,43 +1,43 @@
 <x-guest-layout>
   <div class="card">
     <h2>Registration</h2>
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <!-- Validation Errors -->
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+    <form method="POST" action="{{ route('register') }}">
+      @csrf
 
-            <!-- Name -->
-            <div class="form">
-                <i class="fa-solid fa-user fa-xl"></i>
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" placeholder="Username" required autofocus />
-            </div>
+      <!-- Name -->
+      <div class="form">
+          <i class="fa-solid fa-user fa-xl"></i>
+          <x-input id="name" type="text" name="name" :value="old('name')" placeholder="Username" required autofocus />
+      </div>
 
-            <!-- Email Address -->
-            <div class="form">
-                <i class="fa-solid fa-envelope fa-xl"></i>
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder="Email" required />
-            </div>
+      <!-- Email Address -->
+      <div class="form">
+          <i class="fa-solid fa-envelope fa-xl"></i>
+          <x-input id="email" type="email" name="email" :value="old('email')" placeholder="Email" required />
+      </div>
 
-            <!-- Password -->
-            <div class="form">
-                <i class="fa-solid fa-lock fa-xl"></i>
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" placeholder="Password" required autocomplete="new-password" />
-            </div>
+      <!-- Password -->
+      <div class="form">
+          <i class="fa-solid fa-lock fa-xl"></i>
+          <x-input id="password" type="password" name="password" placeholder="Password" required autocomplete="new-password" />
+      </div>
 
-            <!-- Confirm Password -->
-            <div class="form">
-                <i class="hidden-icon fa-solid fa-lock fa-xl"></i>
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" placeholder="Confirm Password" required />
-            </div>
+      <!-- Confirm Password -->
+      <div class="form">
+          <i class="hidden-icon fa-solid fa-lock fa-xl"></i>
+          <x-input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm Password" required />
+      </div>
 
-        <div class="btn">
-          <x-button>
-            {{ __('登録') }}
-          </x-button>
-        </div>
+      <div class="btn">
+        <x-button>
+          {{ __('登録') }}
+        </x-button>
+      </div>
 
-        </form>
+    </form>
   </div>
 </x-guest-layout>
 
@@ -47,6 +47,7 @@
     background: white;
     margin: 100px auto;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
   }
   h2 {
     color: white;

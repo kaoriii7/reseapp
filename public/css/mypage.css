@@ -1,23 +1,19 @@
   .container {
     padding: 0 100px;
   }
-
   .user-name {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
-
   .content-wrap {
     display: flex;
     justify-content: space-between;
   }
-
   .ttl {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
   }
-
   .wrap {
     width: 47%;
   }
@@ -31,24 +27,32 @@
     margin: 20px 20px 20px 0;
     color: #fff;
     width: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
   }
-  .card_ttl {
+  .reservation-card__ttl {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 18px;
   }
-  .x_btn {
+  .fa-clock {
+    margin-right: 30px;
+  }
+  .x-btn {
     height: 30px;
     border: none;
     border-radius: 7px;
     background: #1463ff;
     color: #fff;
     cursor: pointer;
+    margin-top: -10px;
   }
   th {
     text-align: left;
   }
   th, td {
-    padding: 5px 20px 5px 5px;
+    padding: 0 20px 0 5px;
+    line-height: 2.5em;
     color: #fff;
   }
 
@@ -59,11 +63,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.card {
+.like-card {
   width: 46%;
   margin: 10px 0;
   background: white;
   border-radius: 7px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 
 .img img {
@@ -79,12 +84,12 @@
   padding: 20px;
 }
 
-.card-ttl {
-  margin-bottom: 5px;
+.like-card__ttl {
+  margin-bottom: 10px;
   font-size: 24px;
 }
 
-.card-tag {
+.card__tag {
   font-size: 14px;
 }
 
@@ -94,7 +99,7 @@
   margin-top: 20px;
 }
 
-.btn {
+.detail-btn {
   padding: 5px 20px;
   border: none;
   border-radius: 7px;
@@ -118,13 +123,27 @@
   .container {
     padding: 0 50px;
   }
+  .user-name {
+    margin-left: 50px;
+  }
+  .wrap {
+    width: 100%;
+  }
+  .content-wrap {
+    flex-flow: column;
+  }
   .card-wrap {
     flex-flow: column;
   }
-  .card {
+  .like-card {
     width: 100%;
   }
-  tr {
-    display: grid;
+  .card {
+    margin: 20px auto;
+    width: 80%;
+  }
+  .ttl {
+    margin-left: 50px;
+    margin-top: 30px;
   }
 }

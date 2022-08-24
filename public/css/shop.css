@@ -19,14 +19,18 @@ button {
   border-bottom-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
 }
-.form_box {
+.form__box {
   margin: 12px;
   padding: 4px;
   border: none;
 }
-.area_form, .name_form {
+.area-form, .name-form {
   background: none;
+}
+.name-form {
+  width: 60%;
 }
 .bar {
   font-size: 24px;
@@ -54,6 +58,7 @@ button {
   margin-top: 24px;
   background: white;
   border-radius: 7px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
 }
 .card:nth-child(4n) {
   margin-right: 0;

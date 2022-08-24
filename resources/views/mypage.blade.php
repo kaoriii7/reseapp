@@ -14,12 +14,12 @@
       <h2 class="ttl">予約状況</h2>
       @foreach ($reservations as $key=>$reservation)
       <form action="{{ route('mypage.delete') }}" method="get">
-        <div class="reservation-card">
-          <div class="card_ttl">
-            <h3>予約{{$key+1}}</h3>
-            <div class="delete_btn">
+        <div class="reservation-card card">
+          <div class="reservation-card__ttl">
+            <h3><i class="fa-solid fa-clock fa-lg"></i>予約{{$key+1}}</h3>
+            <div class="delete-btn">
               <input type="hidden" name="reservation_id" value="{{ $reservation->id }}">
-              <button type="submit" class="x_btn">
+              <button type="submit" class="x-btn">
                 <i class="fa-regular fa-circle-xmark"></i>
               </button>
             </div>
@@ -50,15 +50,15 @@
       <h2 class="ttl">お気に入り店舗</h2>
       <div class="card-wrap">
       @foreach ($likes as $like)
-        <article class="card">
+        <article class="like-card card">
           <div class="img">
             <img src="{{ $like->shop->genre->image }}" alt="">
           </div>
           <section class="card-content">
-              <h3 class="card-ttl">{{ $like->shop->name }}</h3>
-              <p class="card-tag">#{{ $like->shop->area->name }} #{{ $like->shop->genre->name }}</p>
+              <h3 class="like-card__ttl">{{ $like->shop->name }}</h3>
+              <p class="card__tag">#{{ $like->shop->area->name }} #{{ $like->shop->genre->name }}</p>
               <div class="btn-wrap">
-                <a href="/detail/{{ $like->shop->id }}"><button class="btn">詳しくみる</button></a>
+                <a href="/detail/{{ $like->shop->id }}"><button class="detail-btn">詳しくみる</button></a>
                 <form action="/unlike" method="post">
                 @csrf
                   <!-- <p>unlike</p> -->

@@ -19,11 +19,11 @@
         <div class="menu-wrap">
           <nav class="nav" id="nav">
             <ul>
-              <li class="list"><a href="/home">Home</a></li>
+              <li class="nav__list"><a href="/">Home</a></li>
               <form action="{{ route('logout') }}" method="get">
-              <button class="list" type="submit">Logout</button>
+              <button class="nav__list" type="submit">Logout</button>
               </form>
-              <li class="list"><a href="/mypage">Mypage</a></li>
+              <li class="nav__list"><a href="/mypage">Mypage</a></li>
             </ul>
           </nav>
           <div class="menu" id="menu">

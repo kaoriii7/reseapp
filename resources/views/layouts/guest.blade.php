@@ -15,9 +15,9 @@
         <div class="menu-wrap">
           <nav class="nav" id="nav">
             <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="{{ route('register') }}">Rgistratione</a></li>
-              <li><a href="{{ route('login') }}">Login</a></li>
+              <li class="nav__list"><a href="/">Home</a></li>
+              <li class="nav__list"><a href="{{ route('register') }}">Rgistratione</a></li>
+              <li class="nav__list"><a href="{{ route('login') }}">Login</a></li>
             </ul>
           </nav>
           <div class="menu" id="menu">

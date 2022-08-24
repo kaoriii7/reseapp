@@ -23,6 +23,7 @@ select {
   border-radius: 7px;
   margin-top: -5px;
   text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 .shop-ttl {
   display: flex;
@@ -64,6 +65,7 @@ img {
   color: white;
   background: #1463ff;
   border-radius: 7px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 .reservation-ttl {
   margin: 30px 20px;
@@ -72,7 +74,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-.form-content {
+.form__content {
   margin: 0 20px 14px 20px;
   padding: 5px;
   border-radius: 5px;
@@ -96,7 +98,7 @@ td {
   padding-left: 0;
   width: 70%;
 }
-.reserve-btn {
+.reservation-btn__wrap {
   background: #0752ea;
   width: 100%;
   border-bottom-left-radius: 7px;
@@ -104,7 +106,7 @@ td {
   margin-top: 60%;
   text-align: center;
 }
-.btn {
+.reservation-btn {
   color: white;
   background: #0752ea;
   border: none;

@@ -10,7 +10,7 @@
 <div class="container">
   <article class="wrap shop-wrap">
     <div class="shop-ttl">
-      <a class="back-btn" href="/home"><</a>
+      <a class="back-btn" href="/"><</a>
       <h2>{{ $shop->name }}</h2>
       @if ($shop->liked(Auth::id()))
       <form class="form" action="/unlike" method="post">
@@ -46,11 +46,11 @@
         @error('date')
             <p class="error container__form--error">{{$message}}</p>
         @enderror
-        <input class="date-form form-content" id="date_id" type="date" name="date" value="{{ old('date') }}">
+        <input class="date-form form__content" id="date_id" type="date" name="date" value="{{ old('date') }}">
         @error('time_id')
             <p class="error container__form--error">{{$message}}</p>
         @enderror
-        <select class="form-content" id="time_id" name="time_id">
+        <select class="form__content" id="time_id" name="time_id">
           <option value="">time</option>
           @foreach ($times as $time)
             <option value="{{$time}}" @if(old('time_id', $time_id ?? '') == $time) selected @endif>{{ $time }}</option>
@@ -59,7 +59,7 @@
         @error('person_id')
             <p class="error container__form--error">{{$message}}</p>
         @enderror
-        <select class="form-content" id="person_id" name="person_id">
+        <select class="form__content" id="person_id" name="person_id">
           <option value="">number</option>
           @foreach ($persons as $person)
           {{var_dump($persons)}}
@@ -68,7 +68,7 @@
         </select>
       </div>
       <div class="output-table">
-        <table class>
+        <table>
           <tr>
             <th>Shop</th>
             <input type="hidden" name="shop_id" value="{{ $shop->id }}">
@@ -88,8 +88,8 @@
           </tr>
         </table>
       </div>
-      <div class="reserve-btn">
-        <input class="btn" type="submit" value="予約する">
+      <div class="reservation-btn__wrap">
+        <input class="reservation-btn" type="submit" value="予約する">
       </div>
     </form>
   </div>

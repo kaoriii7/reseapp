@@ -50,7 +50,7 @@ a {
   font-weight: bold;
   margin-top: 30px;
 }
-.list {
+.nav__list {
   margin-top: 30px;
 }
 button {
@@ -60,17 +60,16 @@ button {
   background: none;
   border: none;
 }
-
 .menu {
   display: inline-block;
   width: 50px;
   height: 50px;
   border-radius: 7px;
   background: #1463ff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
   cursor: pointer;
   position: relative;
 }
-
 .menu__line--top,
 .menu__line--middle,
 .menu__line--bottom {
@@ -82,22 +81,18 @@ button {
   left: 10px;
   transition: 0.5s;
 }
-
 .menu__line--top {
   width: 15px;
   top: 16px;
 }
-
 .menu__line--middle {
   width: 26px;
   top: 24px;
 }
-
 .menu__line--bottom {
   width: 7px;
   bottom: 16px;
 }
-
 .menu.open span:nth-of-type(1) {
   top: 23px;
   transform: rotate(45deg);
