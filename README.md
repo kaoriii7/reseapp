@@ -1,64 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Reseアプリ
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+飲食店の予約アプリ。![トップ画像](https://user-images.githubusercontent.com/103088168/186350448-115905be-0c7c-4811-be12-77111b383b3e.png)
 
-## About Laravel
+## 作成目的
+気になる飲食店はお気に入り登録して、すぐに探すことができ、また予約もWEBで簡単に行えるツールを用意することで、より外食産業を活性化させるため。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## アプリケーションURL
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 他のリポジトリ
+[Laravel](https://github.com/kaoriii7/resepj.git)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 機能一覧
+- 飲食店一覧画面
 
-## Learning Laravel
+    一覧表示、エリア検索、ジャンル検索、店名検索、お気に入り登録・削除
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 飲食店詳細画面
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    飲食店詳細取得、お気に入り登録・削除、予約情報追加
 
-## Laravel Sponsors
+- 予約完了画面
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    飲食店詳細画面（直前の画面）へ戻る
 
-### Premium Partners
+- 会員登録画面
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    会員登録画面表示、会員登録する
 
-## Contributing
+- 登録完了画面
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ログイン画面へ遷移
 
-## Code of Conduct
+- ログイン画面
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ログイン画面表示、ログインする
 
-## Security Vulnerabilities
+- マイページ画面
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ユーザー情報取得、お気に入り一覧取得、予約情報取得、予約情報削除
 
-## License
+- メニュー画面（ログイン前）
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ホーム画面（飲食店一覧）へ遷移、会員登録画面へ遷移、ログイン画面へ遷移
+
+- メニュー画面（ログイン後）
+
+    ホーム画面（飲食店一覧）へ遷移、ログアウトする、マイページへ遷移
+
+## 使用技術（実行環境）
+PHP 8.1.6
+
+Laravel 8.83.19
+
+GitHub
+
+## テーブル設計![テーブル設計１](https://user-images.githubusercontent.com/103088168/186350633-33410410-4f39-4ab1-9ce8-23d8ba9227ea.png)![テーブル設計２](https://user-images.githubusercontent.com/103088168/186350643-3f0542c9-fd33-48f6-95bb-6019dc9831d9.png)![テーブル設計３](https://user-images.githubusercontent.com/103088168/186350651-7a859ebd-96f0-4173-b817-fc5c9d0146ad.png)
+
+## ER図![ER図](https://user-images.githubusercontent.com/103088168/186351805-e9afa021-3364-4f61-8075-64fc723fde82.png)
+
+## 環境構築
+
+## その他
