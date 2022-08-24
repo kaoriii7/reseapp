@@ -6,6 +6,7 @@
 気になる飲食店はお気に入り登録して、すぐに探すことができ、また予約もWEBで簡単に行えるツールを用意することで、より外食産業を活性化させるため。
 
 ## アプリケーションURL
+[heroku](https://git.heroku.com/pacific-badlands-07048.git)
 
 ## 他のリポジトリ
 [Laravel](https://github.com/kaoriii7/resepj.git)
