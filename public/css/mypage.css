@@ -70,7 +70,6 @@
   border-radius: 7px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
-
 .img img {
   width: 100%;
   background-position: center;
@@ -79,26 +78,21 @@
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
 }
-
 .card-content {
   padding: 20px;
 }
-
 .like-card__ttl {
   margin-bottom: 10px;
   font-size: 24px;
 }
-
 .card__tag {
   font-size: 14px;
 }
-
 .btn-wrap {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
 .detail-btn {
   padding: 5px 20px;
   border: none;
@@ -108,13 +102,11 @@
   color: #fff;
   cursor: pointer;
 }
-
 .fa-heart {
   color: pink;
   font-size: 40px;
   cursor: pointer;
 }
-
 .unlike {
   color: red;
 }

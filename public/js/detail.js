@@ -9,7 +9,6 @@ inputDate.addEventListener('input', updateDate);
 inputTime.addEventListener('input', updateTime);
 inputNumber.addEventListener('input', updateNumber);
 
-
 function updateDate(e) {
   outputDate.textContent = e.target.value;
 }
