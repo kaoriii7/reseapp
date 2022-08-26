@@ -2,28 +2,23 @@
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
 }
-
 body {
   background: #E6E6FA;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
   padding: 50px 100px;
 }
-
 .ttl-wrap {
   display: flex;
   align-items: center;
 }
-
 h1 {
   margin-left: 20px;
   font-size: 40px;
   color: #1463ff;
 }
-
 a {
   text-decoration: none;
   color: #1463ff;
@@ -32,19 +27,18 @@ a {
 /* menu-wrap */
 
 .nav {
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  top: -100px;
+  height: 120vh;
   width: 100%;
   left: -100%;
   background: #E6E6FA;
   transition: .7s;
   text-align: center;
 }
-
 .nav ul {
-  padding-top: 200px;
+  padding-top: 300px;
 }
-
 .nav ul li {
   font-size: 28px;
   font-weight: bold;
@@ -93,22 +87,23 @@ button {
   width: 7px;
   bottom: 16px;
 }
+.menu.open {
+  position: fixed;
+  top: 50px;
+  }
 .menu.open span:nth-of-type(1) {
   top: 23px;
   transform: rotate(45deg);
   width: 26px;
 }
-
 .menu.open span:nth-of-type(2) {
   opacity: 0;
 }
-
 .menu.open span:nth-of-type(3) {
   top: 23px;
   transform: rotate(-45deg);
   width: 26px;
 }
-
 .in {
   transform: translateX(100%);
 }
