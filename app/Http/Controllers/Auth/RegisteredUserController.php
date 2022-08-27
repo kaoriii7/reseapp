@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
-use App\Rules\alpha_num_check;
-
 
 class RegisteredUserController extends Controller
 {
@@ -38,7 +36,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', new alpha_num_check, Rules\Password::defaults()],
+            'password' => ['required', 'confirmed', 'regex:/\A(?=.*?[a-z])(?=.*?\d)(?=.*?[!-\/:-@[-`{-~])[!-~]+\z/i',  Rules\Password::defaults()],
         ]);
 
         $user = User::create([
