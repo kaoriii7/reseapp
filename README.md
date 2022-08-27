@@ -66,6 +66,6 @@ GitHub
 ## その他
 - 登録済みテストユーザー
 
-　　ユーザー名 : KAORI  
-　　メールアドレス : a@gmail.com    
-　　パスワード : aaaaaaaa
+　　ユーザー名 :  ささみ
+　　メールアドレス : sasami@gmail.com    
+　　パスワード : sasami1@
