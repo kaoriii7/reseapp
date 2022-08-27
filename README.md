@@ -9,7 +9,7 @@
 [heroku](https://pacific-badlands-07048.herokuapp.com/)
 
 ## 他のリポジトリ
-[Laravel](https://github.com/kaoriii7/resepj.git)
+[Laravel](https://github.com/kaoriii7/reseapp.git)
 
 ## 機能一覧
 - 飲食店一覧画面
