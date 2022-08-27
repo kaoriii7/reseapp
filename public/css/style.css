@@ -22,6 +22,7 @@ h1 {
 a {
   text-decoration: none;
   color: #1463ff;
+  cursor: pointer;
 }
 
 /* menu-wrap */
@@ -53,6 +54,7 @@ button {
   color: #1463ff;
   background: none;
   border: none;
+  cursor: pointer;
 }
 .menu {
   display: inline-block;
