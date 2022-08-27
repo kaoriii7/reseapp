@@ -116,13 +116,5 @@
   function updateNumber(e) {
     outputNumber.textContent = e.target.value;
   }
-
-  // 日付の範囲指定？
-  dayjs.locale('ja');
-  const _nowStr = dayjs().format('YYYY-MM-DD');
-  const _maxStr = dayjs().add(180, 'day').format('YYYY-MM-DD');
-  const _formDate = document.getElementById('date_id');
-  _formDate.attributes.min.value = _nowStr;
-  _formDate.attributes.max.value = _maxStr;
 </script>
 @endsection
